@@ -7,7 +7,7 @@ import 'package:number_trivia_tdd_architecture/features/number_trivia/domain/ent
 import '../../../../fixtures/fixture_reader.dart';
 
 void main() {
-  final tNumberTriviaModel = NumberTriviaModel(number: 1, text: 'Test Text');
+  final tNumberTriviaModel = NumberTriviaModel(number: 1, text: 'Test');
 
   test(
     'Should be a subclass of NumberTrivia Entity',
@@ -30,7 +30,7 @@ void main() {
         },
       );
       test(
-        'Should return a valid model when the JSON number is an double',
+        'Should return a valid model when the JSON number is a double',
         () async {
           final Map<String, dynamic> jsonMap =
               json.decode(fixture('trivia_double.json'));
