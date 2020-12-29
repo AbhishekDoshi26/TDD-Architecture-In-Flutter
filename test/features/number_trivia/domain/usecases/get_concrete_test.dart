@@ -21,7 +21,7 @@ void main() {
     () async {
       when(mockRepository.getConcrete(any))
           .thenAnswer((_) async => Right(tNumberTrivia));
-      final result = await useCase.execute(number: tNumber);
+      final result = await useCase(Params(number: tNumber));
       expect(result, Right(tNumberTrivia));
       verify(mockRepository.getConcrete(tNumber));
       verifyNoMoreInteractions(mockRepository);
