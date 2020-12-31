@@ -15,7 +15,7 @@ import 'package:http/http.dart' as http;
 import 'features/number_trivia/domain/repositories/number_trivia_repository_impl.dart';
 
 final serviceLocator = GetIt.instance;
-void init() async {
+Future<void> init() async {
   //Features - Number Trivia
   serviceLocator.registerFactory(
     () => NumberTriviaBloc(
